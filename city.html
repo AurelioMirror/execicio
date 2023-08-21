@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visualizador de Imagens de Cidade</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      margin-bottom: 20px;
+    }
+    /* Estilo para a faixa no topo */
+    header {
+      background-color: rgb(51, 122, 183);
+      color: white;
+      padding: 10px 0;
+    }
+    /* Estilo para o container das imagens */
+    .image-container {
+      display: flex;
+      flex-wrap: wrap; /* Permite que as imagens quebrem para uma nova linha */
+      justify-content: center; /* Centraliza as imagens horizontalmente */
+      align-items: center;
+      margin-top: 20px;
+    }
+    /* Estilo para cada imagem individual */
+    .image {
+      margin: 0 10px 20px; /* Espaçamento horizontal entre as imagens e abaixo das imagens */
+      text-align: center;
+      flex: 1; /* Ocupa espaço igualmente na linha */
+      max-width: 300px; /* Limita a largura máxima das imagens */
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 80px solid rgb(241, 241, 241); /* Adicionado estilo de borda */
+      padding: 10px; /* Adicionado preenchimento dentro da borda */
+      display: block; /* Remove espaçamento extra abaixo da imagem */
+    }
+    /* Estilo para o nome da cidade */
+    .city-name {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    /* Estilo para o relógio digital */
+    .city-clock {
+      font-size: 20px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Visualizador de Imagens de Cidade</h1>
+  </header>
+</header>
+
+  <div class="image-container">
+    <!-- Código HTML das imagens ... -->
+    <div class="image-container">
+        <div class="image">
+          <img src="dubai.jpg" alt="Dubai">
+          <p class="city-name">Dubai</p>
+          <p>Cidade de Dubai</p>
+          <p class="city-clock" id="dubai-clock"></p>
+        </div>
+        <div class="image">
+          <img src="city.jpg" alt="Cidade">
+          <p class="city-name">Cidade</p>
+          <p>Cidade de Nova York</p>
+          <p class="city-clock" id="nyc-clock"></p>
+        </div>
+        <div class="image">
+            <img src="ssa.jpg" alt="Cidade">
+            <p class="city-name">Cidade</p>
+            <p>Cidade de Salvador</p>
+            <p class="brasil-clock" id="brasil-clock"></p>
+          </div>
+          <div class="image">
+            <img src="africasul.jpg" alt="Cidade">
+            <p class="city-name">Cidade</p>
+            <p>Cidade Africa do Sul</p>
+            <p class="brasil-clock" id="brasil-clock"></p>
+          </div>
+          <div class="image">
+            <img src="cidade-do-méxico.jpg" alt="Cidade">
+            <p class="city-name">Cidade</p>
+            <p>Cidade do México</p>
+            <p class="brasil-clock" id="brasil-clock"></p>
+          </div>
+          <div class="image">
+            <img src="cidades-da-india.jpg" alt="Cidade">
+            <p class="city-name">Cidade</p>
+            <p>Cidade India</p>
+            <p class="brasil-clock" id="brasil-clock"></p>
+          </div>
+          <div class="image">
+            <img src="jdm.jpg" alt="Cidade">
+            <p class="city-name">Cidade</p>
+            <p>Cidade do Japão</p>
+            <p class="brasil-clock" id="brasil-clock"></p>
+          </div>
+          <div class="image">
+            <img src="ksa.jpg" alt="Cidade">
+            <p class="city-name">Cidade</p>
+            <p>Cidade Árabia Saudita</p>
+            <p class="brasil-clock" id="brasil-clock"></p>
+          </div>
+          <div class="image">
+            <img src="paris.jpg" alt="Cidade">
+            <p class="city-name">Cidade</p>
+            <p>Cidade de Paris</p>
+            <p class="brasil-clock" id="brasil-clock"></p>
+          </div>
+      </div>
+  </div>
+
+  <script>
+    // Funções de atualização de relógio ...
+
+    // Atualizar os relógios a cada segundo
+    setInterval(updateDubaiClock, 1000);
+    setInterval(updateNYCClock, 1000);
+    setInterval(updateBrasilClock, 1000);
+    
+    // Atualizar os relógios assim que a página for carregada
+    updateDubaiClock();
+    updateNYCClock();
+    updateBrasilClock();
+  </script>
+</body>
+</html>
